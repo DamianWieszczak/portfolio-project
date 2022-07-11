@@ -3,7 +3,7 @@
   <header class="masthead text-white text-center">
       <div class="container d-flex align-items-center flex-column">
           <!-- Masthead Avatar Image-->
-          <img class="masthead-avatar mb-5" src="startbootstrap-freelancer-gh-pages/assets/img/avataaars.svg" alt="..." />
+          <img class="masthead-avatar mb-5" src="/startbootstrap-freelancer-gh-pages/assets/img/circle_photo.png" alt="..." />
           <!-- Masthead Heading-->
           <h1 class="masthead-heading text-uppercase mb-0">Damian</h1>
           <!-- Icon Divider-->
@@ -17,6 +17,33 @@
       </div>
   </header>
 
+  <!-- Skills Section-->
+  <section class="page-section bg-danger text-white mb-0" id="about">
+      <div class="container">
+          <!-- Skills Section Heading-->
+          <h2 class="page-section-heading text-center text-uppercase text-white">Skills</h2>
+          <!-- Icon Divider-->
+          <div class="divider-custom divider-light mb-5">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+              <div class="divider-custom-line"></div>
+          </div>
+          <!-- Skills Section Content-->
+
+          <div class="row text-center mt-2">
+            <% @skills.each do |skill|%>
+              <div class="col-md-4">
+              <span>
+                <i class="fas <%= skill.icon %> fa-2x mb-2"></i>
+              </span>
+                <h4><%= skill.name %></h4>
+                <p class="lead mt-3"><%= skill.description %></p>
+              </div>
+            <% end %>
+          </div>
+
+      </div>
+  </section>
 
   <!-- Portfolio Section-->
   <section class="page-section portfolio" id="portfolio">
@@ -88,6 +115,7 @@
           </div>
       </div>
   </section>
+
   <!-- About Section-->
   <section class="page-section bg-danger text-white mb-0" id="about">
       <div class="container">
@@ -113,6 +141,7 @@
           </div>
       </div>
   </section>
+
   <!-- Contact Section-->
   <section class="page-section" id="contact">
       <div class="container">
@@ -184,6 +213,7 @@
           </div>
       </div>
   </section>
+
   <!-- Footer-->
   <footer class="footer text-center bg-danger">
       <div class="container">
@@ -192,35 +222,37 @@
               <div class="col-lg-4 mb-5 mb-lg-0">
                   <h4 class="text-uppercase mb-4">Location</h4>
                   <p class="lead mb-0">
-                      2215 John Daniel Drive
+                      Example street 14
                       <br />
-                      Clark, MO 65243
+                      59-300 Lubin
                   </p>
               </div>
               <!-- Footer Social Icons-->
               <div class="col-lg-4 mb-5 mb-lg-0">
                   <h4 class="text-uppercase mb-4">Around the Web</h4>
-                  <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                  <a class="btn btn-outline-light btn-social mx-1" href="mailto:damian.wieszczak@gmail.com"><i class="fas fa-fw fa-envelope"></i></a>
                   <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
                   <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                  <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                  <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/DamianWieszczak"><i class="fab fa-fw fa-github"></i></a>
               </div>
               <!-- Footer About Text-->
               <div class="col-lg-4">
-                  <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                  <h4 class="text-uppercase mb-4">About</h4>
                   <p class="lead mb-0">
-                      Freelance is a free to use, MIT licensed Bootstrap theme created by
-                      <a href="http://startbootstrap.com">Start Bootstrap</a>
+                      A small portion of information on
+                      <a href="https://www.linkedin.com/in/damian-wieszczak-527a17204/">Linkedin</a>
                       .
                   </p>
               </div>
           </div>
       </div>
   </footer>
+
   <!-- Copyright Section-->
   <div class="copyright py-4 text-center text-white">
       <div class="container"><small>Copyright &copy; Damian Wieszczak 2022</small></div>
   </div>
+
   <!-- Portfolio Modals-->
   <!-- Portfolio Modal 1-->
   <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
@@ -243,7 +275,8 @@
                               <a href="https://github.com/DamianWieszczak/tindog"><img class="img-fluid rounded mb-5" src="startbootstrap-freelancer-gh-pages/assets/img/portfolio/tindog.png" alt="..." /></a>
                               
                               <!-- Portfolio Modal - Text-->
-                              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                              <p class="mb-4">A project that simulates the main page of a certain app for getting to know each other and meeting, but for our four-legged pets. 
+                                Thanks to her, he will not be bored anymore during our absence, and they will also be able to bark at their neighbors together.</p>
                               <button class="btn btn-danger" data-bs-dismiss="modal">
                                   <i class="fas fa-xmark fa-fw"></i>
                                   Close Window
@@ -255,6 +288,7 @@
           </div>
       </div>
   </div>
+
   <!-- Portfolio Modal 2-->
   <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
       <div class="modal-dialog modal-xl">
@@ -265,7 +299,7 @@
                       <div class="row justify-content-center">
                           <div class="col-lg-8">
                               <!-- Portfolio Modal - Title-->
-                              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Personal Site</h2>
                               <!-- Icon Divider-->
                               <div class="divider-custom">
                                   <div class="divider-custom-line"></div>
@@ -275,7 +309,8 @@
                               <!-- Portfolio Modal - Image-->
                               <a href="https://github.com/DamianWieszczak/Personal-Site"><img class="img-fluid rounded mb-5" src="startbootstrap-freelancer-gh-pages/assets/img/portfolio/personal_site.png" alt="..." /></a>
                               <!-- Portfolio Modal - Text-->
-                              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                              <p class="mb-4">Designed to learn to use HTML, and above all CSS. 
+                              "Personal-Site" presents brief information about me and my intentions regarding the further development of my professional career.</p>
                               <button class="btn btn-danger" data-bs-dismiss="modal">
                                   <i class="fas fa-xmark fa-fw"></i>
                                   Close Window
@@ -287,6 +322,7 @@
           </div>
       </div>
   </div>
+
   <!-- Portfolio Modal 3-->
   <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
       <div class="modal-dialog modal-xl">
@@ -307,7 +343,7 @@
                               <!-- Portfolio Modal - Image-->
                               <a href="https://github.com/DamianWieszczak/small-twitter"><img class="img-fluid rounded mb-5" src="startbootstrap-freelancer-gh-pages/assets/img/portfolio/small_twitter.png" alt="..." /></a>
                               <!-- Portfolio Modal - Text-->
-                              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                              <p class="mb-4">A small application based on one of the most popular social media in the world. Created for self-study by observing the various materials available on the web.</p>
                               <button class="btn btn-danger" data-bs-dismiss="modal">
                                   <i class="fas fa-xmark fa-fw"></i>
                                   Close Window
@@ -319,6 +355,7 @@
           </div>
       </div>
   </div>
+
   <!-- Portfolio Modal 4-->
   <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
       <div class="modal-dialog modal-xl">
@@ -339,7 +376,8 @@
                               <!-- Portfolio Modal - Image-->
                               <a href="https://github.com/DamianWieszczak/rails-blog"><img class="img-fluid rounded mb-5" src="startbootstrap-freelancer-gh-pages/assets/img/portfolio/rails-blog.png" alt="..." /></a>                              
                               <!-- Portfolio Modal - Text-->
-                              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                              <p class="mb-4">This is Rails Blog - an application where you can write your short posts and other users / followers of the application can comment on this content. 
+                                In addition to creating articles, you can also create your own profile and fill it with standard information.</p>
                               <button class="btn btn-danger" data-bs-dismiss="modal">
                                   <i class="fas fa-xmark fa-fw"></i>
                                   Close Window
@@ -351,6 +389,7 @@
           </div>
       </div>
   </div>
+
   <!-- Portfolio Modal 5-->
   <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
       <div class="modal-dialog modal-xl">
@@ -371,7 +410,7 @@
                               <!-- Portfolio Modal - Image-->
                               <a href="https://github.com/DamianWieszczak/photo-stock"><img class="img-fluid rounded mb-5" src="startbootstrap-freelancer-gh-pages/assets/img/portfolio/photo-stock.png" alt="..." /></a>
                               <!-- Portfolio Modal - Text-->
-                              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                              <p class="mb-4">This is a very simple application where you can create albums and add your photos containing many great memories and beautiful views!</p>
                               <button class="btn btn-danger" data-bs-dismiss="modal">
                                   <i class="fas fa-xmark fa-fw"></i>
                                   Close Window
@@ -383,6 +422,7 @@
           </div>
       </div>
   </div>
+
   <!-- Portfolio Modal 6-->
   <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
       <div class="modal-dialog modal-xl">
